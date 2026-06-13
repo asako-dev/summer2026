@@ -1,0 +1,850 @@
+@charset "UTF-8";
+/* ---------------------
+    reset.scss ここから
+  ---------------------*/
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  font-weight: normal;
+}
+
+body {
+  line-height: 1;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ---------------------
+    reset.scss ここまで
+  ---------------------*/
+/* ---------------------
+    base.scss ここから
+  ---------------------*/
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Noto Serif JP", serif;
+  font-style: normal;
+  color: #ffffff;
+  font-size: 1.4rem;
+  background: #000000;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.sp {
+  display: block;
+}
+
+.pc {
+  display: none;
+}
+
+.inner {
+  width: 90%;
+  margin: auto;
+}
+
+li {
+  list-style: none;
+}
+
+@media (min-width: 480px) {
+  html {
+    font-size: 68.75%;
+  }
+}
+@media (min-width: 640px) {
+  html {
+    font-size: 75%;
+  }
+}
+@media (min-width: 960px) {
+  html {
+    font-size: 93.75%;
+  }
+  body {
+    font-size: 18px;
+  }
+  .sp {
+    display: none;
+  }
+  .pc {
+    display: block;
+  }
+  .inner {
+    max-width: 1000px;
+    margin: auto;
+  }
+}
+/* ---------------------
+    base.scss ここまで
+  ---------------------*/
+/* ---------------------
+    main.scss ここから
+  ---------------------*/
+a {
+  transition: 0.3s;
+}
+a:hover {
+  opacity: 0.7;
+}
+
+.btn_more {
+  display: block;
+  transition: 0.3s;
+}
+.btn_more:hover {
+  opacity: 0.5;
+}
+
+.btn_buy {
+  display: block;
+  transition: 0.3s;
+}
+@media (min-width: 960px) {
+  .btn_buy {
+    max-width: 700px;
+    margin: auto;
+  }
+}
+.btn_buy:hover {
+  opacity: 0.5;
+}
+
+.h2-title {
+  text-align: center;
+  font-size: 3.2rem;
+  padding: 6rem 0 3rem;
+  background-image: url({{ "tate_ashirai.webp" | file_url }});
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 6px auto;
+}
+@media (min-width: 960px) {
+  .h2-title {
+    font-size: 60px;
+  }
+}
+.h2-title span {
+  display: block;
+  font-size: 12px;
+  padding-top: 2rem;
+}
+@media (min-width: 960px) {
+  .h2-title span {
+    font-size: 25px;
+  }
+}
+
+.h3-title {
+  font-size: 16px;
+  text-align: center;
+  padding-bottom: 6rem;
+}
+@media (min-width: 960px) {
+  .h3-title {
+    font-size: 20px;
+  }
+}
+
+.lead {
+  padding: 7rem 0;
+  background-image: url({{ "tate_tate.webp" | file_url }});
+  background-repeat: no-repeat;
+  background-position: center bottom 5rem;
+  background-size: 60% auto;
+}
+@media (min-width: 960px) {
+  .lead {
+    background-size: 400px auto;
+    padding: 150px 0;
+  }
+}
+.lead h1 {
+  width: 80%;
+  margin: 0 auto 3rem;
+}
+.lead p {
+  line-height: 4;
+  text-align: center;
+}
+@media (min-width: 960px) {
+  .lead p {
+    font-size: 25px;
+  }
+}
+
+.itain {
+  background: url({{ "tate_bg01.webp" | file_url }});
+  background-size: cover;
+  padding: 7rem 0;
+}
+@media (min-width: 960px) {
+  .itain {
+    padding: 150px 0;
+  }
+}
+
+.itain-group {
+  margin-bottom: 5rem;
+}
+
+.swiperThumbnail {
+  margin-left: 2vw;
+  /*アクティブなときのアイコン*/
+}
+.swiperThumbnail .swiper-wrapper {
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.swiperThumbnail .swiper-slide {
+  width: 15% !important;
+  /*非アクティブなときのアイコン*/
+  filter: grayscale(100%);
+  transition: opacity 0.5s;
+}
+@media (min-width: 960px) {
+  .swiperThumbnail .swiper-slide {
+    width: 11% !important;
+  }
+}
+.swiperThumbnail .swiper-slide.swiper-slide-thumb-active {
+  filter: grayscale(0);
+}
+
+.products {
+  margin-top: 5rem;
+  position: relative;
+}
+.products figure {
+  width: 70%;
+  margin: auto;
+}
+@media (min-width: 960px) {
+  .products figure {
+    width: 400px;
+  }
+}
+.products h4 {
+  position: absolute;
+  top: 30%;
+  left: 52%;
+  font-size: 2.2rem;
+}
+
+.box {
+  background: url({{ "tate_box_bg.webp" | file_url }}) no-repeat center/cover;
+  color: #333333;
+  padding: 3rem 2rem;
+  position: relative;
+  margin-bottom: 5rem;
+}
+@media (min-width: 960px) {
+  .box {
+    max-width: 700px;
+    margin: auto;
+    padding: 50px 80px;
+    margin-bottom: 150px;
+  }
+}
+.box p {
+  line-height: 2;
+  padding-bottom: 2rem;
+}
+.box h6 {
+  font-size: 1rem;
+}
+
+.box_up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box_up figure {
+  flex: 3;
+}
+.box_up h5 {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-size: 20px;
+  line-height: 1.8;
+  flex: 1;
+}
+@media (min-width: 960px) {
+  .box_up h5 {
+    flex: 2;
+    font-size: 35px;
+    padding-right: 30px;
+  }
+}
+
+.ribbon-top {
+  position: absolute;
+  top: -2.8vw;
+  left: -2.7vw;
+  width: 30%;
+}
+@media (min-width: 960px) {
+  .ribbon-top {
+    width: 200px;
+    top: -19px;
+    left: -19px;
+  }
+}
+
+.ribbon-bottom {
+  position: absolute;
+  bottom: -2.8vw;
+  right: -2.7vw;
+  width: 30%;
+}
+@media (min-width: 960px) {
+  .ribbon-bottom {
+    width: 200px;
+    bottom: -19px;
+    right: -19px;
+  }
+}
+
+.case {
+  background: url({{ "tate_bg02.webp" | file_url }});
+  background-size: cover;
+  padding: 7rem 0;
+}
+@media (min-width: 960px) {
+  .case {
+    padding: 150px 0;
+  }
+}
+.case figure {
+  margin-bottom: 3rem;
+}
+@media (min-width: 960px) {
+  .case figure {
+    max-width: 700px;
+    margin: auto;
+    margin-bottom: 100px;
+  }
+}
+
+.mat {
+  background: url({{ "tate_bg03.webp" | file_url }});
+  background-size: cover;
+  padding: 7rem 0;
+}
+@media (min-width: 960px) {
+  .mat {
+    padding: 150px 0;
+  }
+}
+.mat figure {
+  margin-bottom: 3rem;
+}
+@media (min-width: 960px) {
+  .mat figure {
+    max-width: 700px;
+    margin: auto;
+    margin-bottom: 100px;
+  }
+}
+
+.banner {
+  width: 100%;
+  height: 21vw;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+@media (min-width: 960px) {
+  .banner {
+    left: auto;
+    right: 0;
+    width: 500px;
+    height: 120px;
+  }
+}
+.banner figure {
+  flex: 1.7;
+  margin-left: 2rem;
+  position: relative;
+  top: -0.3rem;
+  align-self: flex-end;
+}
+@media (min-width: 960px) {
+  .banner figure {
+    margin-left: 10px;
+  }
+}
+
+.banner.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.banner-text {
+  flex: 5;
+  text-align: center;
+}
+.banner-text p:first-of-type {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: #000;
+  letter-spacing: 0.1rem;
+  position: relative;
+}
+.banner-text p:first-of-type::before, .banner-text p:first-of-type::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  height: 1px;
+  background: #333;
+  transform: rotate(60deg);
+}
+@media (min-width: 960px) {
+  .banner-text p:first-of-type::before, .banner-text p:first-of-type::after {
+    top: 65%;
+  }
+}
+.banner-text p:first-of-type::before {
+  left: 1.5rem;
+  transform: rotate(60deg);
+}
+.banner-text p:first-of-type::after {
+  right: 1.5rem;
+  transform: rotate(-60deg);
+}
+.banner-text p:first-of-type span {
+  color: #840808;
+}
+.banner-text p:first-of-type .three {
+  font-size: 4rem;
+  font-style: italic;
+  font-weight: bold;
+}
+.banner-text p:last-of-type {
+  color: #840808;
+  font-size: 5.3vw;
+  font-weight: bold;
+}
+@media (min-width: 960px) {
+  .banner-text p:last-of-type {
+    font-size: 27px;
+  }
+}
+
+/**************************\
+  modal ここから
+\**************************/
+@keyframes mmfadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes mmfadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes mmslideIn {
+  from {
+    transform: translateY(15%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes mmslideOut {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-10%);
+  }
+}
+.micromodal-slide {
+  display: none;
+}
+
+.micromodal-slide.is-open {
+  display: block;
+  z-index: 100;
+}
+
+.micromodal-slide[aria-hidden=false] .modal-overlay {
+  animation: mmfadeIn 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden=false] .modal-container {
+  animation: mmslideIn 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden=true] .modal-overlay {
+  animation: mmfadeOut 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden=true] .modal-container {
+  animation: mmslideOut 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.micromodal-slide .modal-container,
+.micromodal-slide .modal-overlay {
+  will-change: transform;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.modal-container {
+  background-color: #fff;
+  width: 90%;
+  padding: 30px 10px;
+  margin: 0 auto;
+  color: #000;
+}
+@media (min-width: 960px) {
+  .modal-container {
+    max-width: 800px;
+    padding: 30px;
+  }
+}
+.modal-container h3 {
+  margin: 3rem 0;
+  display: flex;
+  align-items: center;
+}
+.modal-container h3::after, .modal-container h3::before {
+  content: "";
+  height: 1px;
+  background-color: #000;
+  flex-grow: 1;
+}
+.modal-container h3::after {
+  margin-left: 1rem;
+}
+.modal-container h3::before {
+  margin-right: 1rem;
+}
+
+.modal-title-up {
+  text-align: center;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: #000;
+  letter-spacing: 0.1rem;
+  position: relative;
+}
+.modal-title-up::before, .modal-title-up::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  height: 1px;
+  background: #333;
+  transform: rotate(60deg);
+}
+@media (min-width: 960px) {
+  .modal-title-up::before, .modal-title-up::after {
+    top: 60%;
+  }
+}
+.modal-title-up::before {
+  left: 15%;
+  transform: rotate(60deg);
+}
+@media (min-width: 960px) {
+  .modal-title-up::before {
+    left: 30%;
+  }
+}
+.modal-title-up::after {
+  right: 15%;
+  transform: rotate(-60deg);
+}
+@media (min-width: 960px) {
+  .modal-title-up::after {
+    right: 30%;
+  }
+}
+.modal-title-up span {
+  color: #840808;
+}
+.modal-title-up .three {
+  font-size: 4rem;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.modal-title-down {
+  background: #840808;
+  color: #fff;
+  font-size: 5.3vw;
+  font-weight: bold;
+  padding: 10px;
+  margin: 0 -10px 2rem;
+  text-align: center;
+}
+@media (min-width: 960px) {
+  .modal-title-down {
+    font-size: 40px;
+    margin: 0 -30px 2rem;
+  }
+}
+
+.modal-text {
+  color: #000;
+  line-height: 2;
+}
+
+.badge {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.badge li {
+  width: 30%;
+}
+@media (min-width: 960px) {
+  .badge li {
+    width: 120px;
+  }
+}
+
+.attention {
+  font-size: 1rem;
+  line-height: 1.5;
+  text-indent: -1em;
+  padding-left: 1em;
+  margin: 2rem 0;
+}
+@media (min-width: 960px) {
+  .attention {
+    font-size: 12px;
+    margin: 50px 0 30px;
+  }
+}
+
+.close {
+  background-color: #1a1a1a;
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  padding: 1rem 0;
+  background-image: url({{ "close.webp" | file_url }});
+  background-repeat: no-repeat;
+  background-position: left 30% center;
+  background-size: 2rem;
+}
+@media (min-width: 960px) {
+  .close {
+    background-position: left 40% center;
+  }
+}
+
+/**************************\
+   modal ここまで
+\**************************/
+footer {
+  text-align: center;
+  padding: 7rem 0 10rem;
+  color: #fff;
+}
+@media (min-width: 960px) {
+  footer {
+    padding: 100px 0;
+  }
+}
+footer h4 {
+  padding-bottom: 2rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+footer h5 {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+@media (min-width: 960px) {
+  footer h5 {
+    font-size: 14px;
+  }
+}
+
+.sns {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding-bottom: 5rem;
+}
+.sns li img {
+  width: 3rem;
+}
+
+.nav {
+  padding-bottom: 3rem;
+}
+@media (min-width: 960px) {
+  .nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-size: 16px;
+  }
+}
+.nav li {
+  padding-bottom: 2rem;
+  transition: 0.3s;
+}
+.nav li:hover {
+  opacity: 0.5;
+}
+
+.scroll-btn {
+  display: block;
+  width: 5rem;
+  position: fixed;
+  z-index: 10;
+  bottom: 1rem;
+  right: 1rem;
+  opacity: 0;
+  transition: 0.5s ease;
+}
+
+.visible {
+  opacity: 1;
+}
+
+/* ---------------------
+    main.scss ここまで
+  ---------------------*/
+
+/*# sourceMappingURL=style.css.map */
