@@ -330,7 +330,7 @@ h1 {
 }
 @media (min-width: 960px) {
   .prize-best {
-    max-width: 1000px;
+    max-width: 1250px;
     margin: 0 auto 70px;
   }
   .prize-best h2 {
@@ -444,7 +444,7 @@ h1 {
   flex: 6;
 }
 .best-list__atgrp {
-  padding-top: 2rem;
+  padding-top: 1rem;
 }
 .best-list__atgrp li {
   font-size: 1.2rem;
@@ -452,7 +452,8 @@ h1 {
 }
 @media (min-width: 960px) {
   .best-list__atgrp li {
-    font-size: 12px;
+    font-size: 14px;
+    text-align: center;
   }
 }
 .best-list__atgrp li a {
@@ -491,7 +492,7 @@ h1 {
   flex: 6;
 }
 .best-list-no-border__atgrp {
-  padding-top: 2rem;
+  padding-top: 1rem;
 }
 .best-list-no-border__atgrp li {
   font-size: 1.2rem;
@@ -499,7 +500,8 @@ h1 {
 }
 @media (min-width: 960px) {
   .best-list-no-border__atgrp li {
-    font-size: 12px;
+    font-size: 14px;
+    text-align: center;
   }
 }
 .best-list-no-border__atgrp li a {
@@ -520,6 +522,11 @@ h1 {
     font-size: 22px;
     text-align: center;
   }
+}
+.prize-title span {
+  font-size: 1.2rem;
+  display: block;
+  margin-top: 0.5rem;
 }
 
 .prize-price-best {
